@@ -37,10 +37,16 @@ public class TobenotToolkitEditor : ModuleRules
 				"CoreUObject",
 				"Engine",
 				"Slate",
-				"SlateCore",
+				"SlateCore", 
+				"UMGEditor",
+				"ContentBrowser",
+				"UMG",
+				"UnrealEd",
+				"Blutility",
+				"InputCore",
 				// ... add private dependencies that you statically link with here ...	
 			}
-			);
+		);
 		
 		
 		DynamicallyLoadedModuleNames.AddRange(
@@ -49,5 +55,8 @@ public class TobenotToolkitEditor : ModuleRules
 				// ... add any modules that your module loads dynamically here ...
 			}
 			);
+		
+		PrivateIncludePaths.AddRange(new string[] { "TobenotToolkitEditor" });
+		PublicIncludePaths.AddRange(new string[] { "TobenotToolkitEditor" });
 	}
 }
